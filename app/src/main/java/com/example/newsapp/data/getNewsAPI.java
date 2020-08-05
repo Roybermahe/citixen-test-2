@@ -40,7 +40,7 @@ public class getNewsAPI extends AsyncTask<Void, Void, Void> {
     protected Void doInBackground(Void... voids) {
         StringBuilder news = new StringBuilder();
         try {
-            URL url = new URL("https://newsapi.org/v2/everything?q=bitcoin&from=2020-07-04&sortBy=publishedAt&apiKey=14f70045a6184c80ac2aa986d2f53a17");
+            URL url = new URL("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=14f70045a6184c80ac2aa986d2f53a17");
             HttpURLConnection connection = (HttpURLConnection)url.openConnection();
             connection.setRequestMethod("GET");
             connection.setRequestProperty("Content-type", "application/json");
